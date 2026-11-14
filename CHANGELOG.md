@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.2.2
+
+- Add the Jeraya icon for the plugin marketplace.
+
 ## 1.2.1
 
 - The MCP connection is now named `plugin:jeraya:mcp` (was `plugin:jeraya:jeraya`). Connected users need to sign in again once.

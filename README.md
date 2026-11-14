@@ -1,3 +1,5 @@
+<img src=".claude-plugin/icon.png" alt="Jeraya" width="96" height="96">
+
 # Jeraya Agent Kit
 
 Bring [Jeraya](https://jeraya.com) into your AI tools: a plugin that connects Claude Code to the Jeraya MCP server, plus skills to work with your Jeraya skills, integrations, scripts, tables and apps.
