@@ -1,0 +1,18 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "jeraya",
+  "description": "The Jeraya plugin for AI agents, updated with each release.",
+  "owner": {
+    "name": "Jeraya",
+    "url": "https://jeraya.com"
+  },
+  "plugins": [
+    {
+      "name": "jeraya",
+      "source": "./",
+      "description": "Use your Jeraya skills, integrations, scripts, tables and apps from Claude Code",
+      "category": "productivity",
+      "keywords": ["jeraya", "mcp", "skills", "automation", "integrations", "tables", "apps"]
+    }
+  ]
+}

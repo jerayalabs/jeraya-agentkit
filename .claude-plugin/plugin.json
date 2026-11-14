@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "jeraya",
+  "version": "1.2.1",
+  "description": "Use your Jeraya skills, integrations, scripts, tables and apps from Claude Code, backed by the Jeraya MCP server",
+  "author": {
+    "name": "Jeraya",
+    "url": "https://jeraya.com"
+  },
+  "homepage": "https://jeraya.com",
+  "repository": "https://github.com/jerayalabs/jeraya-agentkit",
+  "license": "MIT",
+  "keywords": ["jeraya", "mcp", "skills", "automation", "integrations", "tables", "apps"]
+}
