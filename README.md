@@ -63,6 +63,7 @@ The plugin connects to Jeraya's hosted MCP server at `https://api.jeraya.com/mcp
 - **Integrations**: browse integrations, their actions and triggers, and run them
 - **Scripts**: read script modules and run their functions
 - **Tables**: list tables, read schemas, query, count and aggregate records, create, update and delete them
+- **Record updates**: read a record's Updates thread and post updates that mention members and attach files, images and videos
 - **Automations**: create, update and run flows
 - **Apps**: create Mini Apps
 
@@ -75,6 +76,7 @@ The plugin connects to Jeraya's hosted MCP server at `https://api.jeraya.com/mcp
 | `/jeraya:integration [name]` | List integrations, or show one's functions |
 | `/jeraya:script <module id> [function]` | Read a script module, or run a function |
 | `/jeraya:table [name] [request]` | List tables, show one, query, count, aggregate or edit records |
+| `/jeraya:record baseId,tableId,recordId [request]` | Open a record from its copied reference, read its updates, post an update (mentions, files, images, videos) or edit it |
 | `/jeraya:app <name> [purpose]` | Create a Mini App wired to your tables and integrations |
 
 The `jeraya` skill loads on its own whenever you mention Jeraya, so you can also just ask.
@@ -86,7 +88,7 @@ The `jeraya` skill loads on its own whenever you mention Jeraya, so you can also
   marketplace.json   the jeraya marketplace (this repo)
   plugin.json        the jeraya plugin manifest
 .mcp.json            the Jeraya MCP server (OAuth, no token in the config)
-skills/              setup, skill, integration, script, table, app, jeraya
+skills/              setup, skill, integration, script, table, record, app, jeraya
 hooks/hooks.json     SessionStart: re-sync skills (only if ~/.jeraya/config.json exists)
 scripts/
   sync-skills.mjs    sync your Jeraya skills; --dir <path> for other agents

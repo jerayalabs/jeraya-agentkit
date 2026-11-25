@@ -1,6 +1,6 @@
 ---
 name: jeraya
-description: Work with the user's Jeraya account through the Jeraya MCP - find and run their Jeraya skills, browse integrations (actions and triggers), read or run script modules, query and edit their tables and records, and create Mini Apps. Use when the user mentions Jeraya, a Jeraya skill, integration, automation, script, table, record or app.
+description: Work with the user's Jeraya account through the Jeraya MCP - find and run their Jeraya skills, browse integrations (actions and triggers), read or run script modules, query and edit their tables and records, post record updates that mention members and attach files, images and videos, and create Mini Apps. Use when the user mentions Jeraya, a Jeraya skill, integration, automation, script, table, record or app.
 ---
 
 # Jeraya
@@ -25,6 +25,12 @@ All Jeraya capabilities come from the **Jeraya MCP server** (named `mcp`, bundle
 - `queryRecords` (`where` like `(Status,eq,Open)`, `sort` required: `[]` for none, `fields`, `pageSize` up to 200), `countRecords`, `getRecord`, `aggregate_single` (field **ids**), `readAttachment`.
 - `createRecords`, `updateRecords`, `deleteRecords` change data: confirm first; for deletes show the rows and get an explicit yes.
 - `createTable` (with `listMenu` / `createMenuGroup` for folders) creates a table, where the server offers it.
+
+## Record updates
+Every record has an **Updates** thread (its discussion). A record reference copied from the app looks like `/jeraya:record baseId,tableId,recordId` (e.g. `pq96l92fx0xu8gu,mtp990yqqpk73rl,147`): follow the `record` skill for it.
+- `listRecordUpdates` (`tableId`, `recordId`) reads the thread.
+- `listBaseMembers` (optional `search`) finds people to mention: their `id`, email and `mention` token.
+- `addRecordUpdate` (`tableId`, `recordId`, Markdown `text`, `mentions` with member ids or emails, `files`) posts an update; mentioned members are notified. Each file is a public `url` or base64 `data` URI with a `fileName` and `mimeType`; images and videos show inline, other files as links. Show the update and get a yes before posting.
 
 ## Mini Apps
 - `createMiniApp` (`slug`, `name`, `type`, optional `icon`, `description`, `config` with `theme`, `navigation`, `features`, `dataSources`, `integrations`, `settings`). Use table ids from `getTablesList`. Confirm the draft first. There is no tool to list or edit apps.

@@ -1,8 +1,8 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "jeraya",
-  "version": "1.2.2",
-  "description": "Use your Jeraya skills, integrations, scripts, tables and apps from Claude Code, backed by the Jeraya MCP server",
+  "version": "1.3.0",
+  "description": "Use your Jeraya skills, integrations, scripts, tables, records and apps from Claude Code, backed by the Jeraya MCP server",
   "icon": "./.claude-plugin/icon.png",
   "author": {
     "name": "Jeraya",
